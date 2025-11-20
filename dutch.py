@@ -1,9 +1,14 @@
-# Input player names :: player_name[i] 
+# Input player names :: player_names[i]
+player_names = []
 while True:
-    print('Please type your name.')
-    name = input('>')
-    if name == 'your name':
-        break
+    print('(a)dd a new player, (e)nter scores, (c)lear names and scores.')
+    choice = input('>')
+    if choice == 'a':
+        print('Enter the name of user ' + str(len(player_names) + 1) + ' (Or enter nothingn to stop.):')
+        name = input()
+        if name == '':
+            break
+        player_names = player_names + [name] # List concatenation
 print('Thank you!')
 # TODO: Show the overall score :: all scores are running_total_score = 0 :: int
 
